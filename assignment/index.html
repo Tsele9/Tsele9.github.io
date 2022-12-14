@@ -6,6 +6,7 @@
 <head>
  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Lesotho orphans page</title>
@@ -28,9 +29,10 @@
 	
 </head>
 
-
-<div class="p-3 mb-2 bg-dark text-white">
 <body class="p-3 m-0 border-0 bd-example">
+<div class="model">
+<div class="p-3 mb-2 bg-dark text-white">
+
  <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="">ORPHARNS LESOTHO HELP</a>
@@ -97,7 +99,12 @@
 
 
 
- 
+   const resizeOps = () => {
+    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  };
+
+  resizeOps();
+  window.addEventListener("resize", resizeOps);
   
    
 
@@ -272,7 +279,7 @@ fetch(api_url)
 
 </div>
 
-
+</div>
 
  
 </body>
