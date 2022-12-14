@@ -1,0 +1,223 @@
+/* I always reset all the html elements */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background: linear-gradient(to right, #07d2df, #009eb3);
+}
+
+body{
+	font-family: sans-serif;
+	min-height: 100vh;
+	color: #555;
+}
+
+table{
+	width:  1000px;
+	margin: 30px auto;
+}
+
+table th{
+	padding: 10px 0;
+	background-color: #f4f4f4;
+	/* background-color: #fff; */
+	border:  thin solid #d4d4d4;
+}
+
+table td{
+	padding: 10px;
+	border:  thin solid #d4d4d4;
+	width: 18%;
+	text-align: center;
+	background-color: #fff;
+
+  border: 4px solid black;
+  border-radius: 15px;
+}
+}
+
+table img{
+	width:  70%;
+}
+
+table td.total-price{
+	font-weight: bold;
+	font-size: 22px;
+}
+table a{
+	text-decoration: none;
+	color: darkred;
+	background-color: #ffecef;
+	padding: 10px 15px;
+}
+table a:active{
+	background-color: #ccf4d6;
+	color:  green;
+}
+
+table select{
+	padding: 10px;
+	width:  200px;
+	font-size: 16px;
+	border: thin solid #d4d4d4;
+	background-color: transparent;
+}
+table select:focus{
+	outline: none;
+}
+
+table img{
+	width:  60%;
+	 width: 200px;
+  height: 200px;  
+}
+
+
+.aa{
+	float: right;
+
+  border-radius: 25px;
+  background: black;
+  padding: 20px; 
+
+  margin-top: 3%;
+  margin-right: 22%;
+  text-align: center;
+}
+
+
+.democlass {
+  margin-top: -27%;
+  margin-right: 19%;
+    width: 200px;
+  height: 200px;  
+}
+
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.tab-wrap {
+  width: 50%;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: auto;
+  position: relative;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+img{
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	float: right;
+	
+}
+
+.tab-wrap input[type="radio"] {
+  position: absolute;
+ 
+}
+
+.tab-wrap li {
+  float: left;
+  display: block;
+}
+
+.tab-wrap label {
+  background: #fff;
+  color: black;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px 3px 0 0;
+  margin: 0 41px 0 0;
+  padding: 20px 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-wrap label::after {
+  content: "";
+  border: 2px solid #fff;
+  position: absolute;
+  float: left;
+  top: 44%;
+  margin-left: 30%;
+  width: 100%;
+}
+
+.tab-wrap .tab-content {
+  background: black;
+  width: 100%;
+  border-radius: 0 110px;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  padding: 45px;
+  display: none;
+}
+
+.tab-wrap [id^="tab"]:checked+label {
+  background: #333;
+  color: #fff;
+}
+
+.tab-wrap [id^="tab"]:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-top: 15px solid #333;
+  border-right: 14px solid transparent;
+  margin-left: -13px;
+}
+
+.tab-wrap [id^="tab"]:checked~.tab-content {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background: #333;
+  color: white;
+  margin-top: 35%;
+}
+
+.tab-content p {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+@media(max-width:768px) {
+  .tab-wrap {
+      width: 80%;
+  }
+  .tab-wrap li {
+      width: 100%;
+      margin-bottom: 18px;
+  }
+  .tab-wrap label {
+      padding: 15px 11px;
+      width: 100%;
+  }
+  .tab-wrap label::after {
+      display: none;
+  }
+  .tab-wrap .tab-content {
+      top: 200px;
+  }
+}

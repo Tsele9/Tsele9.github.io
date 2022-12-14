@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+</style>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>Lesotho orphans page</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<!-- Setting the pages character encoding -->
+	<meta charset="UTF-8">
+	
+	 <meta charset="UTF-8">
+    <!--<title> Responsive Footer | CodingLab</title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+	<!-- The meta viewport will scale my content to any device width -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	 <!-- Link to my stylesheet -->
+	 <link rel="stylesheet" href="styles.css">
+	
+</head>
+
+
+<div class="p-3 mb-2 bg-dark text-white">
+<body class="p-3 m-0 border-0 bd-example">
+ <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">ORPHARNS LESOTHO HELP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+         
+            <a class="nav-link" href="#"><button type="button" class="btn btn-success" onclick="myFunction()">view list of Opharns</button></a>
+			
+            <a class="nav-link"><button type="button" class="btn btn-primary" onclick="getISS()">find orphan</button></a>
+			
+        
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+<table class="table table-dark table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">IMAGE</th>
+      <th scope="col">LOCATION</th>
+    </tr>
+  </thead>
+	
+		<tbody id="data-output">
+			<!-- Prodcuts from gavascript file in here. -->
+		</tbody>
+	</table>
+
+
+
+<p id="demo"></p>
+<center><canvas id="myChart" style="width:100%;max-width:600px"></canvas></center>
+    <div class="wrappper">
+        <h1>ORPHAN BAR CHART</h1>
+        <ul class="tab-wrap">
+            <li>
+                <input type="radio" id="tab-1" name="tab" checked>
+                <label for="tab-1">ORPHAN DETAILS</label>
+                <div class="tab-content">
+                    <h2>ORPHAN DETAILS</h2>
+                   <p>
+      ID: <span id="idd"></span><br/>
+      NAME: <span id="nam"></span><br/>
+	  
+	  
+	  LOCATION:<span id="loc"></span><br/>
+	  TARGET:<span id="tar"></span><br/>
+	  DONATED:<span id="don"></span>
+    </p>
+                </div>
+            </li>
+			
+			
+         
+           
+        </ul>
+    </div>
+	
+<div class="aa">
+ 
+<h5>image</h5>
+</div>
+
+<script>
+
+
+
+ 
+  
+   
+
+      async function getISS() {
+	  const api_url = "https://lesotho-orphanages.vercel.app/";
+
+  let person = prompt("Please enter orphan id", "03");
+  let url_new=api_url + person;
+  if (person ==03) {
+   
+	
+	var x = document.createElement("IMG");
+  x.setAttribute("src", "https://live.staticflickr.com/5020/5484238615_45d912a83b_b.jpg");
+  x.setAttribute("width", "100");
+  x.setAttribute("height", "60");
+   
+    x.setAttribute("class", "democlass");
+  x.setAttribute("alt", "The Pulpit Rock");
+  }
+  
+    if (person ==01) {
+    document.getElementById("demo").innerHTML =
+    url_new;
+	
+	var x = document.createElement("IMG");
+  x.setAttribute("src", "https://www.habitatforhumanity.org.uk/wp-content/uploads/2017/10/housing-poverty-lesotho-africa.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+    x.setAttribute("class", "democlass");
+  x.setAttribute("alt", "The Pulpit Rock");
+  }
+  
+    if (person ==02) {
+    document.getElementById("demo").innerHTML =
+    url_new;
+	
+	var x = document.createElement("IMG");
+  x.setAttribute("src", "https://riseint.org/wp-content/uploads/2017/05/Lesotho-1-1.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+    x.setAttribute("class", "democlass");
+  x.setAttribute("alt", "The Pulpit Rock");
+  }
+  
+  
+    if (person ==04) {
+    document.getElementById("demo").innerHTML =
+    url_new;
+	
+	var x = document.createElement("IMG");
+  x.setAttribute("src", "https://www.habitat.org/sites/default/files/2016-12/lesotho-orphans_0.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+    x.setAttribute("class", "democlass");
+  x.setAttribute("alt", "The Pulpit Rock");
+  }
+  
+    if (person ==05) {
+    document.getElementById("demo").innerHTML =
+    url_new;
+	
+	var x = document.createElement("IMG");
+  x.setAttribute("src", "https://www.humanium.org/en/wp-content/uploads/2020/08/shutterstock_1118238941-1-1024x683.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+    x.setAttribute("class", "democlass");
+  x.setAttribute("alt", "The Pulpit Rock");
+  }
+  
+    if (person ==06) {
+    document.getElementById("demo").innerHTML =
+    url_new;
+	
+	var x = document.createElement("IMG");
+  x.setAttribute("src", "https://everyoneschild.net/wp-content/uploads/2020/06/XrpIbQafQ0CXtTQJPO5QBQ_thumb_c53e.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+    x.setAttribute("class", "democlass");
+  x.setAttribute("alt", "The Pulpit Rock");
+  }
+  
+  const api_urll = url_new;
+  
+  
+        const response = await fetch(api_urll);
+        const data = await response.json();
+        const { id, name, image, location, target, donated } = data;
+
+        document.getElementById('idd').textContent = id;
+        document.getElementById('nam').textContent = name;
+		 document.body.appendChild(x);
+		 	 document.getElementById('loc').textContent = location;
+			 	 document.getElementById('tar').textContent = target;
+				 	 document.getElementById('don').textContent = donated;
+					 
+					 
+					 
+					 var xValues = ["TARGET", "DONATED"];
+var yValues = [textContent = target, textContent = donated];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "LESOTHO ORPHARNS"
+    }
+  }
+});
+
+ window.scrollTo(300, 70000);
+					 
+      }
+
+	
+
+
+</script>
+
+
+
+
+
+	<script>
+function myFunction() {
+   const api_url = ('https://lesotho-orphanages.vercel.app');
+fetch(api_url)
+.then(function(response){
+	return response.json();
+})
+.then(function(api_url){
+	let placeholder = document.querySelector("#data-output");
+	let out = "";
+	for(let p of api_url){
+		out += `
+			<tr>
+			<td>${p.id}</td>
+			<td>${p.name}</td>
+				<td> <img src='${p.image}'> </td>
+				<td>${p.location}</td>
+			
+				
+			
+			</tr>
+		`;
+	}
+
+	placeholder.innerHTML = out;
+});
+}
+</script>
+
+
+
+
+
+
+<footer>
+  <p>James 1:27 says, “Religion that is pure and undefiled before God, the Father, is this: to visit orphans and widows in their affliction, and to keep oneself unstained from the world.”&hearts;<br>
+  <a href="#">LESOTHO ORPHARNS.com</a></p>
+</footer>
+
+
+</div>
+
+
+
+ 
+</body>
+</html>
